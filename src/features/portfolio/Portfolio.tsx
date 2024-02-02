@@ -1,9 +1,10 @@
+import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 
 function Portfolio() {
   return (
     <>
-      <Button>Heelo</Button>
+      <Navbar />
     </>
   );
 }
