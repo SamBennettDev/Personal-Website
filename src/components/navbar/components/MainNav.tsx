@@ -16,8 +16,9 @@ export default function MainNav() {
         onClick={() => navigate("/")}
       >
         <Icons.logo className="h-6 w-6" />
-        <span className="hidden font-bold sm:inline-block">
-          {siteConfig.name}
+        <span className="hidden sm:inline-block">
+          Sam
+          <span className="font-bold">Bennett</span>
         </span>
       </Link>
       <nav className="flex items-center gap-6 text-sm">
