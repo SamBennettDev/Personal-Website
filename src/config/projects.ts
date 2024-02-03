@@ -9,15 +9,15 @@ export const ProjectConfig = [
     tags: [
       {
         name: "JS",
-        color: "blue-text-gradient",
+        color: "text-blue-500/60",
       },
       {
         name: "HTML/CSS",
-        color: "green-text-gradient",
+        color: "text-green-500/60",
       },
       {
         name: "Firebase",
-        color: "pink-text-gradient",
+        color: "text-pink-500/60",
       },
     ],
     image: WorkoutTracker,
@@ -31,15 +31,15 @@ export const ProjectConfig = [
     tags: [
       {
         name: "C++",
-        color: "blue-text-gradient",
+        color: "text-blue-500/60",
       },
       {
         name: "Qt Creator",
-        color: "green-text-gradient",
+        color: "text-green-500/60",
       },
       {
         name: "Box2D",
-        color: "pink-text-gradient",
+        color: "text-pink-500/60",
       },
     ],
     image: AlgoSort,
@@ -48,21 +48,21 @@ export const ProjectConfig = [
     icon: Icons.vimeo,
   },
   {
-    name: "Spreadsheet Application",
+    name: "Spreadsheet",
     description:
       "Fully functional spreadsheet application with formula evaluation, custom file extensions, and 2,574 cells.",
     tags: [
       {
         name: ".Net",
-        color: "blue-text-gradient",
+        color: "text-blue-500/60",
       },
       {
         name: "Visual Studio",
-        color: "green-text-gradient",
+        color: "text-green-500/60",
       },
       {
         name: "Windows Forms",
-        color: "pink-text-gradient",
+        color: "text-pink-500/60",
       },
     ],
     image: Spreadsheet,
@@ -77,15 +77,15 @@ export const ProjectConfig = [
     tags: [
       {
         name: ".Net",
-        color: "blue-text-gradient",
+        color: "text-blue-500/60",
       },
       {
         name: "Visual Studio",
-        color: "green-text-gradient",
+        color: "text-green-500/60",
       },
       {
         name: "Windows Forms",
-        color: "pink-text-gradient",
+        color: "text-pink-500/60",
       },
     ],
     image: Agario,

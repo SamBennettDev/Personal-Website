@@ -1,7 +1,5 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { ViewVerticalIcon } from "@radix-ui/react-icons";
-
 import { docsConfig } from "@/config/docs";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";

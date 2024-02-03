@@ -1,5 +1,4 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { Icons } from "@/components/icons";
 import { docsConfig } from "@/config/docs";
@@ -9,7 +8,7 @@ export default function MainNav() {
   const navigate = useNavigate();
 
   return (
-    <div className="mr-4 hidden md:flex">
+    <div className="mr-4 hidden md:flex ">
       <Link
         to="/"
         className="mr-6 flex items-center space-x-2"
