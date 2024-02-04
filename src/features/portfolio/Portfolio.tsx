@@ -1,12 +1,25 @@
 import Navbar from "@/components/navbar";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
+import { animateScroll, scroller } from "react-scroll";
+import Hero from "./components/Hero";
 
-function Portfolio() {
+function Portfolio({ ScrollTo }: { ScrollTo: string }) {
+  if (ScrollTo) {
+    scroller.scrollTo(ScrollTo, {
+      duration: 500,
+      delay: 100,
+      smooth: true,
+      offset: -60,
+    });
+  } else {
+    animateScroll.scrollToTop({ duration: 500, delay: 100, smooth: true });
+  }
+
   return (
     <>
       <Navbar />
-      <div className="h-[calc(100vh-66px)] bg-card"></div>
+      <Hero />
       <Projects />
       <Experience />
     </>
