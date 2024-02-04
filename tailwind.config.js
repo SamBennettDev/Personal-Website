@@ -20,6 +20,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
+        mono: ["JetBrains Mono", defaultTheme.fontFamily.mono],
       },
       colors: {
         border: "hsl(var(--border))",

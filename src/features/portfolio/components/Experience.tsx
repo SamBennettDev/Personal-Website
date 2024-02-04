@@ -7,10 +7,11 @@ import {
 } from "@/components/ui/card";
 import { ExperienceConfig } from "@/config/experiences";
 import { CircleIcon } from "lucide-react";
+import { Element } from "react-scroll";
 
 export default function Experience() {
   return (
-    <>
+    <Element name="Experience">
       <h2 className=" pt-5 px-5 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         Experience
       </h2>
@@ -55,6 +56,6 @@ export default function Experience() {
           );
         })}
       </div>
-    </>
+    </Element>
   );
 }

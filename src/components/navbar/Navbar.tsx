@@ -5,7 +5,7 @@ import MainNav from "./components/MainNav";
 function Navbar() {
   return (
     <>
-      <div className="flex justify-between items-center w-[100vw] px-5 py-3">
+      <div className="flex justify-between items-center w-[100vw] px-5 h-[60px] fixed  top-0 bg-card">
         <div>
           <MainNav />
           <MobileNav />
