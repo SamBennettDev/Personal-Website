@@ -1,14 +1,14 @@
 import Navbar from "@/components/navbar";
 import Projects from "./components/Projects";
+import Experience from "./components/Experience";
 
 function Portfolio() {
   return (
     <>
       <Navbar />
-      <h2 className="px-5 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-        Projects
-      </h2>
+      <div className="h-[calc(100vh-66px)] bg-card"></div>
       <Projects />
+      <Experience />
     </>
   );
 }

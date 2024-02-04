@@ -5,14 +5,12 @@ import MainNav from "./components/MainNav";
 function Navbar() {
   return (
     <>
-      <div className="flex justify-between content-center w-[100vw] px-10 pt-5">
+      <div className="flex justify-between items-center w-[100vw] px-5 py-3">
         <div>
           <MainNav />
           <MobileNav />
         </div>
-        <div>
-          <ModeToggle />
-        </div>
+        <ModeToggle />
       </div>
     </>
   );
