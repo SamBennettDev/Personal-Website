@@ -15,7 +15,7 @@ export default function Experience() {
       <h2 className=" pt-5 px-5 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         Experience
       </h2>
-      <div className="flex items-center flex-col">
+      <div className="flex items-center flex-col mb-[50px]">
         {ExperienceConfig.map((experience) => {
           return (
             <>
