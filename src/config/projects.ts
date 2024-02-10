@@ -1,7 +1,58 @@
-import { Agario, AlgoSort, Spreadsheet, WorkoutTracker } from "@/assets/images";
+import {
+  Agario,
+  AlgoSort,
+  BetterCanvas,
+  Securaflow,
+  Spreadsheet,
+  WorkoutTracker,
+} from "@/assets/images";
 import { Icons } from "@/components/icons";
 
 export const ProjectConfig = [
+  {
+    name: "Securaflow",
+    description:
+      "A centralized vulnerability management system leveraging APIs of existing task management software.",
+    tags: [
+      {
+        name: "TS",
+        color: "text-blue-500/60",
+      },
+      {
+        name: "MERN",
+        color: "text-green-500/60",
+      },
+      {
+        name: "AWS",
+        color: "text-pink-500/60",
+      },
+    ],
+    image: Securaflow,
+    source_code_link: "https://www.SecuraFlow.com",
+    icon: Icons.gitHub,
+  },
+  {
+    name: "Better Canvas",
+    description:
+      "Custom IOS widget leveraging the Canvas API to show real-time grades and recent assignments on iPhone or IPad homescreens.",
+    tags: [
+      {
+        name: "JS",
+        color: "text-blue-500/60",
+      },
+      {
+        name: "Canvas API",
+        color: "text-green-500/60",
+      },
+      {
+        name: "Widgy",
+        color: "text-pink-500/60",
+      },
+    ],
+    image: BetterCanvas,
+    source_code_link: "https://github.com/SamBennettDev/better-canvas",
+    icon: Icons.gitHub,
+  },
   {
     name: "Workout Tracker",
     description:
