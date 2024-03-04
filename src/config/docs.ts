@@ -9,15 +9,15 @@ export const docsConfig: DocsConfig = {
   mainNav: [
     {
       title: "Projects",
-      href: "/projects",
+      href: "/Projects",
     },
     {
       title: "Experience",
-      href: "/experience",
+      href: "/Experience",
     },
     {
       title: "Contact",
-      href: "/contact",
+      href: "/Contact",
     },
     {
       title: "GitHub",

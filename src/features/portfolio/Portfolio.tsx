@@ -1,27 +1,39 @@
 import Navbar from "@/components/navbar";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
-import { animateScroll, scroller } from "react-scroll";
 import Hero from "./components/Hero";
 
-function Portfolio({ ScrollTo }: { ScrollTo: string }) {
-  if (ScrollTo) {
-    scroller.scrollTo(ScrollTo, {
-      duration: 500,
-      delay: 100,
-      smooth: true,
-      offset: -60,
-    });
-  } else {
-    animateScroll.scrollToTop({ duration: 500, delay: 100, smooth: true });
-  }
+import { useEffect, useRef } from "react";
+
+function Portfolio({ scrollTo }: { scrollTo?: string }) {
+  const projectsRef = useRef<HTMLDivElement | null>(null);
+  const experienceRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    // Check if scrollTo is provided and matches a section
+    if (scrollTo === "Projects" && projectsRef.current) {
+      projectsRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (scrollTo === "Experience" && experienceRef.current) {
+      experienceRef.current.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
+  }, [scrollTo]);
 
   return (
     <>
       <Navbar />
       <Hero />
-      <Projects />
-      <Experience />
+      <div ref={projectsRef} className="scroll-mt-[50px]">
+        <Projects />
+      </div>
+      <div ref={experienceRef} className="scroll-mt-[50px]">
+        <Experience />
+      </div>
     </>
   );
 }
