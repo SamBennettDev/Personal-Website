@@ -1,5 +1,5 @@
 import { WindupChildren } from "windups";
-
+import { motion } from "framer-motion";
 import {
   C,
   CPP,
@@ -17,6 +17,7 @@ import {
   TS,
 } from "@/assets/icons";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   const iconsArray = [
@@ -75,50 +76,69 @@ export default function Hero() {
   };
 
   return (
-    <div className="h-lvh pt-[20lvh] pb-[60px] flex flex-col  items-center">
-      <div className="w-full md:w-4/5 lg:w-3/5 flex">
-        <div className="flex flex-col text-xl md:text-3xl items-end py-2 text-secondary px-1 font-mono">
-          {[...Array(6)].map((_, index) => (
-            <div key={index}>{index + 1}</div>
-          ))}
-        </div>
-        <div className="p-2 h-full w-full border-solid border border-0 border-l-[1px] font-mono text-l md:text-3xl whitespace-pre-line">
-          <WindupChildren
-            onFinished={() => {
-              setPrefix(<div className="font-mono">I know&nbsp;</div>);
-              setTimeout(() => {
-                updateTech();
-                startTimer();
-              }, 200);
-            }}
-          >
-            {
-              <div className="font-mono">
-                Hello, my name is{" "}
-                <strong className="font-mono">Sam Bennett</strong>
-                {"\n\n"}
-                Bachelor's Computer Science{"\n"}University of Utah{"\n\n"}
-              </div>
-            }
-          </WindupChildren>
-          <div className="flex font-mono">
-            <WindupChildren>{prefix}</WindupChildren>
-            <WindupChildren>{tech}</WindupChildren>
+    <>
+      <div className="h-lvh pt-[20lvh] pb-[60px] flex flex-col  items-center">
+        <div className="w-full md:w-4/5 lg:w-3/5 flex">
+          <div className="flex flex-col text-xl md:text-3xl items-end py-2 text-secondary px-1 font-mono">
+            {[...Array(6)].map((_, index) => (
+              <div key={index}>{index + 1}</div>
+            ))}
+          </div>
+          <div className="p-2 h-full w-full border-solid border border-0 border-l-[1px] font-mono text-l md:text-3xl whitespace-pre-line">
+            <WindupChildren
+              onFinished={() => {
+                setPrefix(<div className="font-mono">I know&nbsp;</div>);
+                setTimeout(() => {
+                  updateTech();
+                  startTimer();
+                }, 200);
+              }}
+            >
+              {
+                <div className="font-mono">
+                  Hello, my name is{" "}
+                  <strong className="font-mono">Sam Bennett</strong>
+                  {"\n\n"}
+                  Bachelor's Computer Science{"\n"}University of Utah{"\n\n"}
+                </div>
+              }
+            </WindupChildren>
+            <div className="flex font-mono">
+              <WindupChildren>{prefix}</WindupChildren>
+              <WindupChildren>{tech}</WindupChildren>
+            </div>
           </div>
         </div>
+        <div className="pt-[50px] flex w-full md:w-4/5 lg:w-3/5 flex-wrap gap-2 justify-center px-1">
+          {iconsArray.map((icon, iconIndex) => {
+            return (
+              <img
+                src={icon}
+                className={`h-[40px] w-[40px] md:h-[60px] md:w-[60px] ${
+                  iconIndex === index ? "opacity-100" : "opacity-40"
+                }`}
+              ></img>
+            );
+          })}
+        </div>
+        <div className="absolute xs:bottom-10 bottom-10 w-full flex justify-center items-center">
+          <Link to="/Projects">
+            <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+              <motion.div
+                animate={{
+                  y: [0, 24, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                }}
+                className="w-3 h-3 rounded-full bg-secondary mb-1"
+              />
+            </div>
+          </Link>
+        </div>
       </div>
-      <div className="pt-[50px] flex w-full md:w-4/5 lg:w-3/5 flex-wrap gap-2 justify-center px-1">
-        {iconsArray.map((icon, iconIndex) => {
-          return (
-            <img
-              src={icon}
-              className={`h-[40px] w-[40px] md:h-[60px] md:w-[60px] ${
-                iconIndex === index ? "opacity-100" : "opacity-40"
-              }`}
-            ></img>
-          );
-        })}
-      </div>
-    </div>
+    </>
   );
 }

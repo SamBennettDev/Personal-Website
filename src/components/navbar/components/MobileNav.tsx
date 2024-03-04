@@ -125,15 +125,7 @@ function MobileLink({
   ...props
 }: MobileLinkProps) {
   return (
-    <Link
-      to={to}
-      onClick={(e) => {
-        onClick?.();
-        e.preventDefault();
-      }}
-      className={cn(className)}
-      {...props}
-    >
+    <Link to={to} onClick={onClick} className={cn(className)} {...props}>
       {children}
     </Link>
   );

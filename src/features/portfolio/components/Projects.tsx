@@ -7,15 +7,14 @@ import {
 } from "@/components/ui/card";
 import { ProjectConfig } from "@/config/projects";
 import { Link } from "react-router-dom";
-import { Element } from "react-scroll";
 
 export default function Projects() {
   return (
-    <Element name="Projects">
+    <div>
       <h2 className=" pt-5 px-5 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         Projects
       </h2>
-      <div className="flex flex-wrap w-full justify-around gap-5 p-5">
+      <div className="flex flex-wrap w-full gap-5 p-5 justify-center">
         {ProjectConfig.map((project) => {
           return (
             <>
@@ -52,6 +51,6 @@ export default function Projects() {
           );
         })}
       </div>
-    </Element>
+    </div>
   );
 }
