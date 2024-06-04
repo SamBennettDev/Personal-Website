@@ -20,41 +20,46 @@ export const docsConfig: DocsConfig = {
       href: "/Contact",
     },
     {
+      title: "Blog",
+      href: "https://blog.sam-bennett.dev",
+      external: true,
+    },
+    {
       title: "GitHub",
       href: "https://github.com/SamBennettDev",
       external: true,
     },
   ],
   sidebarNav: [
-    {
-      title: "Portfolio",
-      items: [
-        {
-          title: "Introduction",
-          href: "/docs",
-          items: [],
-        },
-        {
-          title: "Installation",
-          href: "/docs/installation",
-          items: [],
-        },
-      ],
-    },
-    {
-      title: "Joe",
-      items: [
-        {
-          title: "Introduction",
-          href: "/docs",
-          items: [],
-        },
-        {
-          title: "Installation",
-          href: "/docs/installation",
-          items: [],
-        },
-      ],
-    },
+    // {
+    //   title: "Portfolio",
+    //   items: [
+    //     {
+    //       title: "Introduction",
+    //       href: "/docs",
+    //       items: [],
+    //     },
+    //     {
+    //       title: "Installation",
+    //       href: "/docs/installation",
+    //       items: [],
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Joe",
+    //   items: [
+    //     {
+    //       title: "Introduction",
+    //       href: "/docs",
+    //       items: [],
+    //     },
+    //     {
+    //       title: "Installation",
+    //       href: "/docs/installation",
+    //       items: [],
+    //     },
+    //   ],
+    // },
   ],
 };

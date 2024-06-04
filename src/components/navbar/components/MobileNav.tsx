@@ -29,23 +29,23 @@ export function MobileNav() {
             <path
               d="M3 5H11"
               stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              specularExponent="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
             <path
               d="M3 12H16"
               stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
             <path
               d="M3 19H21"
               stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
           </svg>
           <span className="sr-only">Toggle Menu</span>

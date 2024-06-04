@@ -17,41 +17,42 @@ export default function Experience() {
       <div className="flex items-center flex-col mb-[50px]">
         {ExperienceConfig.map((experience) => {
           return (
-            <>
-              <div className="px-5 flex mt-[50px] gap-5">
-                <Card className="hidden md:block bg-background border-none h-auto">
-                  <CardHeader className="flex flex-nowrap flex-row items-center">
-                    <CircleIcon className="h-5" />
-                    <div className="px-2"></div>
-                    <CardDescription className="text-foreground w-[70px]">
-                      {experience.to}
-                      <br />
-                      {experience.from}
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-                <Card className="max-w-[600px] bg-background border-0 border-l-2">
-                  <CardHeader>
-                    <CardTitle>
-                      <div>{experience.title}</div>
-                    </CardTitle>
-                    <CardDescription className="flex justify-between">
-                      <div>{experience.company_name}</div>
-                      <div className="flex md:hidden ">
-                        {experience.from} - {experience.to}
-                      </div>
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="ml-4 list-disc [&>li]:mt-2">
-                      {experience.points.map((point) => {
-                        return <li>{point}</li>;
-                      })}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
-            </>
+            <div
+              key={experience.company_name}
+              className="px-5 flex mt-[50px] gap-5"
+            >
+              <Card className="hidden md:block bg-background border-none h-auto">
+                <CardHeader className="flex flex-nowrap flex-row items-center">
+                  <CircleIcon className="h-5" />
+                  <div className="px-2"></div>
+                  <CardDescription className="text-foreground w-[70px]">
+                    {experience.to}
+                    <br />
+                    {experience.from}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+              <Card className="max-w-[600px] bg-background border-0 border-l-2">
+                <CardHeader>
+                  <CardTitle>
+                    <div>{experience.title}</div>
+                  </CardTitle>
+                  <CardDescription className="flex justify-between">
+                    <div>{experience.company_name}</div>
+                    <div className="flex md:hidden ">
+                      {experience.from} - {experience.to}
+                    </div>
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="ml-4 list-disc [&>li]:mt-2">
+                    {experience.points.map((point, index) => {
+                      return <li key={index}>{point}</li>;
+                    })}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
           );
         })}
       </div>

@@ -114,6 +114,7 @@ export default function Hero() {
             return (
               <img
                 src={icon}
+                key={iconIndex}
                 className={`h-[40px] w-[40px] md:h-[60px] md:w-[60px] ${
                   iconIndex === index ? "opacity-100" : "opacity-40"
                 }`}
