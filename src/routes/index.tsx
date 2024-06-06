@@ -11,6 +11,7 @@ export default function App() {
           path="/Experience"
           element={<Portfolio scrollTo="Experience" />}
         />
+        <Route path="/Education" element={<Portfolio scrollTo="Education" />} />
       </Routes>
     </>
   );

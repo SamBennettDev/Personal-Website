@@ -1,4 +1,4 @@
-import { WindupChildren } from "windups";
+import { Pace, Pause, WindupChildren } from "windups";
 import { motion } from "framer-motion";
 import {
   C,
@@ -78,38 +78,44 @@ export default function Hero() {
   return (
     <>
       <div className="h-lvh pt-[20lvh] pb-[60px] flex flex-col  items-center">
-        <div className="w-full md:w-4/5 lg:w-3/5 flex">
-          <div className="flex flex-col text-xl md:text-3xl items-end py-2 text-secondary px-1 font-mono">
-            {[...Array(6)].map((_, index) => (
+        <div className="w-[300px] md:w-3/5 flex">
+          <div className="flex flex-col text-2xl md:text-3xl items-end py-2 text-secondary px-1 font-mono">
+            {[...Array(4)].map((_, index) => (
               <div key={index}>{index + 1}</div>
             ))}
           </div>
-          <div className="p-2 h-full w-full border-solid border border-0 border-l-[1px] font-mono text-l md:text-3xl whitespace-pre-line">
+          <div className="p-2 h-full w-full border-solid border border-0 border-l-[1px] font-mono text-2xl md:text-3xl whitespace-pre-line">
             <WindupChildren
               onFinished={() => {
                 setPrefix(<div className="font-mono">I know&nbsp;</div>);
                 setTimeout(() => {
                   updateTech();
                   startTimer();
-                }, 200);
+                }, 700);
               }}
             >
               {
                 <div className="font-mono">
-                  Hello, my name is{" "}
-                  <strong className="font-mono">Sam Bennett</strong>
-                  {"\n\n"}
-                  Bachelor's Computer Science{"\n"}University of Utah{"\n\n"}
+                  <Pace ms={100}>Hello,</Pace>
+                  <Pause ms={200} />
+                  <Pace ms={100}>
+                    {"\n"}I'm <strong className="font-mono">Sam Bennett</strong>
+                    {"\n\n"}
+                  </Pace>
                 </div>
               }
             </WindupChildren>
             <div className="flex font-mono">
-              <WindupChildren>{prefix}</WindupChildren>
-              <WindupChildren>{tech}</WindupChildren>
+              <WindupChildren>
+                <Pace ms={100}>{prefix}</Pace>
+              </WindupChildren>
+              <WindupChildren>
+                <Pace ms={100}>{tech}</Pace>
+              </WindupChildren>
             </div>
           </div>
         </div>
-        <div className="pt-[50px] flex w-full md:w-4/5 lg:w-3/5 flex-wrap gap-2 justify-center px-1">
+        <div className="pt-[50px] flex w-[300px] md:w-3/5 flex-wrap gap-2 justify-center px-1">
           {iconsArray.map((icon, iconIndex) => {
             return (
               <img
@@ -123,7 +129,7 @@ export default function Hero() {
           })}
         </div>
         <div className="absolute xs:bottom-10 bottom-10 w-full flex justify-center items-center">
-          <Link to="/Projects">
+          <Link to="/Education">
             <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
               <motion.div
                 animate={{

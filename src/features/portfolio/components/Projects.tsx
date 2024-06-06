@@ -17,35 +17,39 @@ export default function Projects() {
       <div className="flex flex-wrap w-full gap-5 p-5 justify-center">
         {ProjectConfig.map((project) => {
           return (
-            <Card className="w-[350px]" key={project.name}>
-              <CardHeader>
-                <CardTitle className="flex justify-between content-center">
-                  {project.name}
-                  <Link to={project.source_code_link} target="_blank">
+            <Link
+              to={project.source_code_link}
+              target="_blank"
+              key={project.name}
+            >
+              <Card className="w-[350px]">
+                <CardHeader>
+                  <CardTitle className="flex justify-between content-center">
+                    {project.name}
                     <project.icon className="h-6 w-6"></project.icon>
-                  </Link>
-                </CardTitle>
-                <CardDescription className="flex gap-3">
-                  {project.tags.map((tag, index) => {
-                    return (
-                      <div className={tag.color} key={index}>
-                        {tag.name}
-                      </div>
-                    );
-                  })}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <CardTitle>
-                  <img
-                    className="h-[200px] w-full object-cover rounded-lg"
-                    src={project.image}
-                  />
-                </CardTitle>
-                <CardContent></CardContent>
-                {project.description}
-              </CardContent>
-            </Card>
+                  </CardTitle>
+                  <CardDescription className="flex gap-3">
+                    {project.tags.map((tag, index) => {
+                      return (
+                        <div className={tag.color} key={index}>
+                          {tag.name}
+                        </div>
+                      );
+                    })}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <CardTitle>
+                    <img
+                      className="h-[200px] w-full object-cover rounded-lg"
+                      src={project.image}
+                    />
+                  </CardTitle>
+                  <CardContent></CardContent>
+                  {project.description}
+                </CardContent>
+              </Card>
+            </Link>
           );
         })}
       </div>
