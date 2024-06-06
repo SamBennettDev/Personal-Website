@@ -12,6 +12,7 @@ import Python from "./python-144.png";
 import ReactNative from "./react-native-144.png";
 import Tailwind from "./tailwind-css-144.png";
 import TS from "./typescript-144.png";
+import UtahMedallion from "./U_medallion_RED_RGB.png";
 
 export {
   C,
@@ -28,4 +29,5 @@ export {
   ReactNative,
   Tailwind,
   TS,
+  UtahMedallion,
 };
