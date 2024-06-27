@@ -1,14 +1,26 @@
 export const ExperienceConfig = [
   {
+    title: "AI Trainer/Consultant",
+    company_name: "Freelance",
+    iconBg: "#383E56",
+    from: "May 2024",
+    to: "Present",
+    points: [
+      "Utilize Reinforcement Learning from Human Feedback (RLHF) to help large language models learn more efficiently",
+      "Ensure models adhere to legal and ethical obligations (ie. harmlessness, truthfulness, safety, etc.)",
+      "Execute prompt engineering with diverse parameters to evaluate outputs according to specified criteria",
+    ],
+  },
+  {
     title: "Web Development Intern",
     company_name: "University of Utah",
     iconBg: "#383E56",
     from: "Sep 2023",
-    to: "Current",
+    to: "May 2024",
     points: [
-      "Optimized user experience and engagement by achieving a 400% improvement in the initial load time of the University of Utah Campus Store website.",
-      "Played a key role in transitioning the website stack from Insite to Net Suite, contributing to a seamless and efficient process.",
-      "Redesigned and created UI/UX elements, significantly enhancing the visual appeal and usability of the website.",
+      "Optimized website performance, achieving a 4x improvement in initial load time",
+      "Played a key role in the seamless transition of e-commerce providers, moving from MBS Insite to Oracle's NetSuite",
+      "Redesigned and created UI/UX elements, driving a significant improvement in the website's aesthetics and usability",
     ],
   },
 ];
